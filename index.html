@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.3/gsap.min.js"></script>
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Recursive:slnt,wght,CASL,CRSV,MONO@-15..0,300..1000,0..1,0..1,0..1&amp;display=swap" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <meta charset="utf-8" />
+  <STYLE>
+    :root{
+      --wght: 300;
+      --slnt: 0;
+      --CASL: 0;
+    }
+    html, body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Recursive', sans-serif;
+      font-size:24px;
+      background-color : rgb(255,255,255);
+      text-align: center;
+    }
+    
+    #v1{
+      font-variation-settings: 'wght' var(--wght);
+    }
+    #v2{font-variation-settings: 'wght' 100;}
+    #v3{font-variation-settings: 'wght' 400;}
+    #v4{font-variation-settings: 'wght' 700;}
+  </STYLE>
+</head>
+
+<body>
+  <div id="v1">Hello I'm variable</div>
+  <div id="v2">Hello I'm variable</div>
+  <div id="v3">Hello I'm variable</div>
+  <div id="v4">Hello I'm variable</div>
+
+  <script>
+    
+    let tl = gsap.timeline();
+    
+    tl.to('#v1',{
+      '--wght': 1000,
+      yoyo:true,
+      repeat:-1,
+      duration:2,
+      repeatDelay:2
+    })
+
+  </script>
+</body>
+
+
+</html>
